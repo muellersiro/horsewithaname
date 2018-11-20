@@ -4,9 +4,9 @@ public class Student extends Person {
 	   private int matNr;             //obligatorisch
 	   private String studiengang;    //optional
 	   
-	   //Konstruktor nur f�r obligatorsche Attribute
+	   //Konstruktor nur für obligatorsche Attribute
 	   
-	   //Kontruktor f�r alle Attribute
+	   //Kontruktor für alle Attribute
 	   public Student(String name, String vorname, String heimatOrt, Date gebDat, char gender, int matNr, String studiengang) {
 	      super(name, vorname, heimatOrt, gebDat, gender, Person.TYP_STUDENT);
 	      this.matNr = matNr;

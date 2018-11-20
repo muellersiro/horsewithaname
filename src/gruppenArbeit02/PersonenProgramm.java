@@ -22,10 +22,10 @@ public class PersonenProgramm {
             System.out.println( p );
       
       Person p = Person.getOldest(pA);
-      System.out.println("�lteste Person: " + p);
+      System.out.println("älteste Person: " + p);
       
       p = Person.getYoungest(pA);
-      System.out.println("J�ngste Person: " + p);
+      System.out.println("Jüngste Person: " + p);
    }
 
 }

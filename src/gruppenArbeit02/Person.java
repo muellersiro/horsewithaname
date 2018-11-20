@@ -10,7 +10,7 @@ public abstract class Person {
    private String heimatOrt;    //optional
    private Date   gebDat;       //optional
    private char gender;         //optional
-   private Anschrift anschrift; //optional
+   //private Anschrift anschrift; //optional
    
    private String personTyp;    //wird von der konkreten Klasse gesetzt
    
@@ -19,7 +19,7 @@ public abstract class Person {
          throw new RuntimeException("Name darf nicht leer oder Leerstring sein.");
       }
       this.name = name;   
-      this.vorname = vorname;   //name �berpr�fen, obligatorisch
+      this.vorname = vorname;   //name überprüfen, obligatorisch
       this.heimatOrt = heimatOrt;   
       this.gebDat = gebDat;         
       this.gender = gender;         
@@ -34,7 +34,7 @@ public abstract class Person {
    }
    
    /*
-    * gibt �lteste Person aus pA zur�ck 
+    * gibt älteste Person aus pA zurück 
     * (falls es keine Person gibt oder keine mit Geburtsdatum -> null; falls es mehrere gibt -> irgendeine)
     * 
     */
