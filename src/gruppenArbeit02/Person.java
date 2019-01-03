@@ -94,6 +94,7 @@ public abstract class Person {
 		return personToCompare;
 	}
 
+	//gibt jüngste Person aus pA zurück
 	public static Person getYoungest(Person[] pA) {
 		Person personToCompare = pA[0];
 		for (Person p : pA) {
