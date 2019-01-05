@@ -13,18 +13,21 @@ public class Dozent extends Person {
 	private int dozId; // obligatorisch
 	private String[] faecher; // optional
 
+	// Konstruktor für komplette Wertangabe
 	public Dozent(String name, String vorname, String heimatOrt, Date gebDat, char gender, int dozId, String[] faecher) {
 		super(name, vorname, heimatOrt, gebDat, gender, Person.TYP_DOZENT);
-		if (dozId != 0) {
-			this.dozId = dozId;
-		} else {
-			throw new RuntimeException("DozentenId ist obligatorisch");
-		}
+		this.checkDozId(dozId);
 		this.faecher = faecher;
 	}
 
+	// Konstruktor nur für obligatorische Attribute
 	public Dozent(String name, String vorname, String heimatOrt, Date gebDat, char gender, int dozId) {
 		super(name, vorname, heimatOrt, gebDat, gender, Person.TYP_DOZENT);
+		this.checkDozId(dozId);
+	}
+
+	//Dozent ID überprüfen
+	private void checkDozId(int dozId) {
 		if (dozId != 0) {
 			this.dozId = dozId;
 		} else {
@@ -32,10 +35,12 @@ public class Dozent extends Person {
 		}
 	}
 
+	// Obligatorische Attribute
 	public String toString() {
 		return super.toString() + "\nDozenten ID: " + dozId;
 	}
 
+	// Gesetzte Attribute
 	public String getInfo() {
 		String infoString = super.getInfo() + "\nDozenten ID: " + dozId;
 		if (faecher != null && faecher.length > 0) {
@@ -43,7 +48,7 @@ public class Dozent extends Person {
 		}
 		return infoString;
 	}
-	
+
 	// Getters and Setters für optionale Attribute
 	public String[] getFaecher() {
 		return faecher;

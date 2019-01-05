@@ -32,7 +32,6 @@ public class PersonenProgramm {
 		pA[5].setAnschrift(new Anschrift("CH", "3001", "Bern", "Zieglerstrasse", "62"));
 
 		pA[6] = new Student("Äschbacher", "Adrian", "Rapperswil", null, 'm', 5, "Wirtschaftsinformatik");
-		pA[6].setAnschrift(new Anschrift("3008", "Bern", "Junkerngasse", "47"));
 		pA[6].setGebDat(new Date(1997-1900,0,5));
 
 		pA[7] = new Dozent("Aemmer", "Karin", null, new Date(1999-1900, 2, 26), 'w', 1003);
@@ -76,6 +75,4 @@ public class PersonenProgramm {
 		System.out.println("Geburtsdatum: " + p.getGebDat());
 
 	}
-	
-	
 }
